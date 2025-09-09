@@ -1,10 +1,38 @@
-img {
+.image1 {
   width: 100px;
   border-radius: 50px;
   float: left;
   margin-right: 10px;
+  display: grid;
+  justify-self: left;
 }
 
 .username {
   font-weight: bold;
+}
+body {
+  background-image: url("../images/heropilt.jpg");
+  background-position: center;
+  background-size:auto;
+  background-repeat:no-repeat;
+  position: relative;
+}
+header {
+  background-color: rgb(255, 146, 127);
+  display: grid;
+  justify-items: center;
+  padding-bottom: 1cm;
+}
+#sissejuhatus {
+  background-color: rgb(228, 138, 250);
+  padding-bottom: 4cm;
+}
+#teooria {
+  background-color: deeppink;
+  padding-bottom: 4cm;
+}
+#kontakt {
+  background-color: rgb(244, 161, 202);
+  padding-bottom: 2cm;
+  display: grid;
 }
