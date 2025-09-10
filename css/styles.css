@@ -10,29 +10,105 @@
 .username {
   font-weight: bold;
 }
-body {
-  background-image: url("../images/heropilt.jpg");
-  background-position: center;
-  background-size:auto;
-  background-repeat:no-repeat;
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   position: relative;
+  height: 150vh;
+  background-image: url(/images/heropilt.jpg), linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
 }
-header {
-  background-color: rgb(255, 146, 127);
-  display: grid;
-  justify-items: center;
-  padding-bottom: 1cm;
+.hero-content {
+  position:relative;
+  top: -30vh;
+  z-index: 3 ;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  
 }
 #sissejuhatus {
-  background-color: rgb(228, 138, 250);
-  padding-bottom: 4cm;
+  position: absolute;
+  top: 99vh;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgb(0, 0, 0);
+  padding: 6rem 2rem 4rem 2rem
 }
+
 #teooria {
-  background-color: deeppink;
-  padding-bottom: 4cm;
+  z-index: 2;
+  background-color: rgb(0, 0, 0);
+  padding-bottom: 50px;
 }
 #kontakt {
-  background-color: rgb(244, 161, 202);
-  padding-bottom: 2cm;
+  background-color: rgb(0, 0, 0);
+  padding-bottom: 50px;
   display: grid;
+}
+footer {
+  background-color: rgba(0, 0, 0);
+  color: white;
+  padding-bottom: 20px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  padding: 2rem;
+}
+h1, h2, h3, p {
+  margin: 0 0 1rem;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+nav {
+  position: relative;
+  z-index: 2;
+  top: -30vh;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  margin: 0 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+section {
+  padding: 50px 20px;
+}
+section h2 { 
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: white
+}
+section p {
+  font-size: 1.2rem;
+  color: white;
+}
+html{
+  scroll-behavior: smooth;
 }
