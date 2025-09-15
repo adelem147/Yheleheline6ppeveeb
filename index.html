@@ -1,58 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="HTML, CSS">
-    <meta name="description" content="...">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="HTML, CSS" />
+    <meta name="description" content="..." />
     <title>Üheleheline Õppeveeb</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <!--BODY-->
   <body>
+    <a href="#sissejuhatus" class="skip-link">Skip to main content</a>
     <!--HEADER-->
-      <!--MAIN-->
-    <main>
-      <div class="hero">
-          <div class="hero-content">
-          <h1>Õppeveeb</h1>
-        </div>
-       <nav aria-label="Põhinavigatsioon">
-        <ul>
-        <li><a href="#sissejuhatus">Sissejuhatus</a></li>
-        <li><a href="#teooria">Teooria</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-        </nav>
+    <header class="hero">
+      <div id="top"></div>
+      <img class="logo" src="images/a.m.p.svg" alt="logo" />
+      <div class="hero-content">
+        <h1>Õppeveeb</h1>
       </div>
+      <nav aria-label="Põhinavigatsioon">
+        <ul>
+          <li><a href="#sissejuhatus">Sissejuhatus</a></li>
+          <li><a href="#teooria">Teooria</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--MAIN-->
+    <main id="main-content">
+      <!--SECTION SISSEJUHATUS-->
       <section id="sissejuhatus">
         <h2>Sissejuhatus</h2>
-        <p>Mis on HTML?</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt rem repellendus magnam architecto earum! Nisi itaque officiis temporibus magnam ab ducimus necessitatibus atque nam doloremque odio qui in, repudiandae molestias modi eius suscipit a similique? Asperiores distinctio voluptatum tenetur molestiae dolor aperiam, cumque voluptates vel amet enim sed repellendus repellat error exercitationem unde rerum pariatur? Alias, ipsa aliquid similique blanditiis debitis deleniti, hic quod obcaecati optio, velit nisi maiores dolorem iusto tempora voluptatem suscipit provident molestiae eum explicabo repudiandae fuga neque saepe mollitia! Optio necessitatibus perspiciatis aliquam, quos soluta nemo reiciendis deleniti laboriosam omnis dolorem atque animi harum fugit. Quia consequuntur suscipit tempora? Eveniet quam temporibus, dolor deleniti quo voluptates quibusdam provident quos, qui repellendus cumque veniam architecto magni dolorem beatae recusandae numquam nam vero autem praesentium minima! At dolore dicta officia neque fugiat voluptatem qui illum enim soluta, nihil tempora consectetur harum et ullam vel iste eveniet, architecto ipsam.</p>
+        <div class="sissejuhatus-content">
+          <div class="text-content">
+            <p>Mis on HTML?</p>
+            <p>
+              HTML (HyperText Markup Language) on keel, millega märgendatakse
+              veebilehti. Selle abil loome veebilehele struktuuri, pannes ritta
+              elemendid, millest veebileht koosneb.. HTML ei ole
+              programmeerimiskeel, see on lihtsalt märgistuskeel. HTML paneb
+              paika üksnes dokumendi struktuuri, kuid võimaldab veebilehele
+              kaasata skripte, eeskätt JavaScripti ja CSS-i, millega
+              kirjeldatakse lehe kujundus. HTML ja CSS on veebi alustalad.
+              Keerulisemate funktsioonide jaoks kasutavad arendajad tavaliselt
+              programmeerimiskeelt, näiteks JavaScripti. Standardid (nt HTML5)
+              tagavad, et kood töötab ühtemoodi igas brauseris.
+            </p>
+          </div>
+          <video src="videos/sunset.mp4" controls></video>
+        </div>
       </section>
+      <!--SECTION TEOORIA-->
       <section id="teooria">
         <h2>Teooria</h2>
-        <p>HTML tähendus</p>
+        <p>Olulisem info</p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
-          quis praesentium quod itaque inventore quos non commodi ducimus rerum
-          at cupiditate quisquam quae aut veniam fugiat, blanditiis quam dolor
-          necessitatibus dicta iure facilis. Magnam consequatur, doloremque
-          dicta accusantium quia ad explicabo quasi in, non expedita, eaque
-          natus sit facilis corrupti?
+          • HTML ja CSS roll veebilehel: HTML loob struktuuri ja CSS annab
+          sellele välimuse.<br />
+          • CSS pannakse eraldi faili, sest siis on kood puhtam, ühte CSS koosi
+          saab kasutada mitmel lehel, brauser laeb kiiremini, sest brauserid
+          salvestavad CSS-faili vahemällu, muudatused CSS-failis mõjuvad
+          kõikjal.<br />
+          • Semantilised HTML elemendid annavad sisule tähenduse.<br />
+          • Olulisemad semantilised elemendid: &lt;header&gt;, &lt;nav&gt;,
+          &lt;section&gt;, &lt;article&gt;, &lt;aside&gt; ja &lt;footer&gt;.<br />
+          • Tavaline pildi lisamine: &lt;img src="..." alt="..."&gt;, alt tekst
+          on vajalik ligipääsetavuse jaoks.<br />
+          • Erinevad mõõtühikud CSS-i kasutades on: px, rem ja em. px-väiksed
+          detailid, rem-sobib tekstile ja em-suurus on seotud vanema
+          elemendiga.<br />
+          • Pseudoklassid kirjeldavad elemendi eriseisundit. Erinevad
+          pseudoklassid sisaldavad: :hover, :focus, :active jm.<br />
+          • Pseudoelemente kasutatakse dekoratiivsete või tüpograafiliste
+          efektide jaoks. Erinevad pseudoelemendid on: ::before, ::after,
+          ::first-line jm.<br />
+          • Lehe paigutus CSS-is määrab, kuidas elemendid lehel asetsevad.
+          Kaasaaegsed tööriistad selleks on Flexbox ja Grid.<br />
+          • Flexbox sobib horisontaalse või vertikaalse elemendirea
+          joondamiseks. Nt navigeerimisriba, nupurea, vormielemendi jaoks.<br />
+          • Grid sobib keerukamate lehtede ja kaartide paigustamiseks. Nt
+          galeriide, terve lehe layout-i jaoks.<br />
+          • Kohanduvus on tähtis, et veebilehed näeksid igal ekraanil headd
+          välja - arvutis, telefonis kui ka tahvlis.<br />
+          • Hea praktika on planeerida kohanduvus ja ligipääsetavus algusest
+          peale, kasutada validator.w3.org validaatorit ja testida veebilehte
+          reaalselt seadmes.
+
         </p>
       </section>
+
+      <!--SECTION KONTAKT-->
       <section id="kontakt">
-      <div> 
-        <img class="image1"
-         src="images/catpfp.jpeg"
-         alt="cute picture of a cat">
-        <p class="username">Adele Maria Peters</p>
-        <p>i love to learn html</p>
+        <h2>Kontakt</h2>
+        <div class="kontakt-grid">
+          <div class="kontakt-text">
+            <img
+              class="image1"
+              src="images/catpfp.jpeg"
+              alt="cute picture of a cat"
+            />
+            <p class="username">Adele Maria Peters</p>
+            <p>adele-maria.peters@voco.ee</p>
+          </div>
+          <div class="kontakt-images">
+            <div class="image-block">
+              <p class="image-title">Portfoolio</p>
+              <a
+                href="https://adelemariapeters.wixsite.com/portfolio/home"
+                target="_blank"
+              >
+                <img src="images/kittyingrass.jpg" alt="Kitty in grass" />
+              </a>
+            </div>
+            <div class="image-block">
+              <p class="image-title">Tagasi Üles</p>
+              <a href="#top">
+                <img src="images/kitties.jpg" alt="Jump to the Top" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-    <footer> 
+    <!--FOOTER-->
+    <footer>
+      <a href="#top" class="back-to-top" aria-label="Back to top">
+        <img src="images/arrow.svg" alt="Back to top" />
+      </a>
       <p>&copy; Adele Maria Peters 2025</p>
     </footer>
   </body>

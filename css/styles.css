@@ -3,8 +3,6 @@
   border-radius: 50px;
   float: left;
   margin-right: 10px;
-  display: grid;
-  justify-self: left;
 }
 
 .username {
@@ -17,60 +15,116 @@
   align-items: center;
   text-align: center;
   position: relative;
-  height: 150vh;
-  background-image: url(/images/heropilt.jpg), linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+  height: 100vh;
+  background-image: url(/images/heropilt1.jpg),
+    linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: overlay;
+  font-size: 2vw;
 }
 .hero-content {
-  position:relative;
-  top: -30vh;
-  z-index: 3 ;
+  position: relative;
+  z-index: 3;
   color: white;
   text-align: center;
-  padding: 20px;
-  
+  padding: 2rem;
+  font-size: 2vw;
+}
+.logo {
+  position: absolute;
+  width: 30vw;
+  min-width: 60px;
+  max-width: 200px;
+  height: auto;
+  top: 0vw;
+  left: 2vw;
 }
 #sissejuhatus {
-  position: absolute;
-  top: 99vh;
+  position: relative;
   left: 0;
   right: 0;
   z-index: 1;
   background-color: rgb(0, 0, 0);
-  padding: 6rem 2rem 4rem 2rem
+  padding: 6rem 7rem 2rem 5rem;
 }
 
 #teooria {
+  position: relative;
   z-index: 2;
   background-color: rgb(0, 0, 0);
-  padding-bottom: 50px;
+  padding-bottom: 100px;
+  padding-left: 5rem;
+  
 }
 #kontakt {
+  position: relative;
   background-color: rgb(0, 0, 0);
-  padding-bottom: 50px;
+  padding-bottom: 2rem;
   display: grid;
+  padding-left: 5rem;
 }
+.kontakt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+.kontakt-images {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  gap: 1rem;
+  align-items: start;
+}
+.kontakt-images img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+.image-block {
+  text-align: center;
+}
+
+.kontakt-images img:hover {
+  transform: scale(1.05);
+}
+.image-title {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+}
+
 footer {
   background-color: rgba(0, 0, 0);
   color: white;
   padding-bottom: 20px;
+  padding-top: 100px;
 }
 * {
   box-sizing: border-box;
 }
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   line-height: 1.6;
   padding: 2rem;
 }
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin: 0 0 1rem;
 }
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -79,7 +133,7 @@ html, body {
 nav {
   position: relative;
   z-index: 2;
-  top: -30vh;
+  top: -5vh;
 }
 nav ul {
   display: flex;
@@ -97,18 +151,147 @@ nav a {
   font-size: 1.2rem;
   font-weight: bold;
 }
+a:hover {
+  color: rgb(40, 5, 85);
+}
 section {
   padding: 50px 20px;
 }
-section h2 { 
+section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: white
+  color: white;
 }
 section p {
   font-size: 1.2rem;
   color: white;
 }
-html{
+html {
   scroll-behavior: smooth;
+}
+footer {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  .hero {
+    padding: 1rem;
+    height: 70vh;
+  }
+  .logo {
+    width: 30vw;
+    top: 0px;
+    left: 0px;
+  }
+  .hero-content h1 {
+    font-size: 10vw;
+  }
+  .hero-content p {
+    font-size: 5vw;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  nav ul li {
+    margin: 0;
+  }
+  .kontakt-grid {
+    grid-template-columns: 1fr;
+  }
+  .kontakt-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .image-block {
+    width: 100%;
+  }
+  .image-block img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  .kontakt-images img {
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+  .kontakt-images img:hover,
+  .kontakt-images a:focus img {
+    transform: scale(1.05);
+    outline: 3px solid rgb(40, 5, 85);
+    outline-offset: 4px;
+  }
+  .image-title {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+  #sissejuhatus{
+    padding: 2rem;
+  }
+  #teooria {
+    padding: 2rem;
+  }
+  #kontakt {
+    padding: 2rem;
+  }
+  .back-to-top {
+    bottom: 10px;
+    right: 10px;
+  }
+  .back-to-top img {
+    width: 28px;
+    height: 28px;
+  }
+  }
+.back-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.back-to-top:hover {
+  opacity: 1;
+}
+.back-to-top img {
+  filter: invert(1);
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+section video {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+}
+.sissejuhatus-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.text-content {
+  flex: 1 1 50%;
+}
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1000;
+  text-decoration: none;
+  transition: top 0.3s ease;
+}
+.skip-link:focus {
+  top: 10px;
 }
